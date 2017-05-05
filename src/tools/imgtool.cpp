@@ -34,7 +34,7 @@ static void usage(const char *msg = nullptr, ...) {
 commands: assemble, cat, convert, diff, info, makesky
 
 assemble option:
-    --outflie          Output image filename.
+    --outfile          Output image filename.
 
 cat option:
     --sort             Sort output by pixel luminance.
@@ -726,7 +726,7 @@ int convert(int argc, char *argv[]) {
                 rgb[0] /= m;
                 rgb[1] /= m;
                 rgb[2] /= m;
-                image[i] = Spectrum::FromRGB(rgb);
+                image[i] = RGBSpectrum::FromRGB(rgb);
             }
         }
     }
